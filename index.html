@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Study Tracker</h1>
+        
+        <div class="tracker-section">
+            <div class="section-header">
+                <h2>Add New Chapter</h2>
+            </div>
+            <div class="chapter-info">
+                <div class="form-group">
+                    <label for="subject-select">Subject:</label>
+                    <select id="subject-select">
+                        <option value="physics">Physics</option>
+                        <option value="chemistry">Chemistry</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="chapter-name">Chapter Name:</label>
+                    <input type="text" id="chapter-name" placeholder="Enter chapter name">
+                </div>
+                <button id="add-chapter">Add Chapter</button>
+            </div>
+        </div>
+
+        <div class="subject-container">
+            <div class="subject-section" id="physics-container">
+                <div class="subject-header">
+                    <h2>Physics</h2>
+                    <button class="collapse-subject-btn" data-subject="physics">Collapse All</button>
+                </div>
+                <div class="chapters-list" id="physics-chapters">
+                    <!-- Physics chapters will be dynamically added here -->
+                </div>
+            </div>
+            
+            <div class="subject-section" id="chemistry-container">
+                <div class="subject-header">
+                    <h2>Chemistry</h2>
+                    <button class="collapse-subject-btn" data-subject="chemistry">Collapse All</button>
+                </div>
+                <div class="chapters-list" id="chemistry-chapters">
+                    <!-- Chemistry chapters will be dynamically added here -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Template for a chapter card -->
+        <template id="chapter-template">
+            <div class="chapter-card">
+                <div class="chapter-header">
+                    <h3 class="chapter-title"></h3>
+                    <div class="chapter-actions">
+                        <button class="collapse-btn">Collapse</button>
+                        <button class="delete-btn">Delete</button>
+                    </div>
+                </div>
+                
+                <div class="chapter-content">
+                    <div class="tracker-section">
+                        <h4>Important Information</h4>
+                        <div class="important-info">
+                            <textarea class="chapter-important-info" placeholder="Add important notes about this chapter..."></textarea>
+                        </div>
+                    </div>
+                
+                    <div class="tracker-section">
+                        <h4>Theory</h4>
+                        <div class="subsection">
+                            <h5>Allen</h5>
+                            <div class="checkbox-container">
+                                <input type="checkbox" class="theory-allen">
+                                <label>Completed</label>
+                            </div>
+                        </div>
+                        <div class="subsection">
+                            <h5>BT Book</h5>
+                            <div class="checkbox-container">
+                                <input type="checkbox" class="theory-bt">
+                                <label>Completed</label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tracker-section">
+                        <h4>Question Practice</h4>
+                        <div class="subsection">
+                            <h5>Allen</h5>
+                            <div class="checkbox-container">
+                                <input type="checkbox" class="practice-allen">
+                                <label>Completed</label>
+                            </div>
+                            <div class="remarks-container">
+                                <label>Remarks:</label>
+                                <textarea class="remarks-allen" placeholder="Add your remarks here..."></textarea>
+                            </div>
+                        </div>
+                        
+                        <div class="subsection">
+                            <h5>SQB</h5>
+                            <div class="checkbox-container">
+                                <input type="checkbox" class="practice-sqb">
+                                <label>Completed</label>
+                            </div>
+                            <div class="remarks-container">
+                                <label>Remarks:</label>
+                                <textarea class="remarks-sqb" placeholder="Add your remarks here..."></textarea>
+                            </div>
+                        </div>
+                        
+                        <div class="subsection">
+                            <h5>BT</h5>
+                            
+                            <div class="bt-exercises">
+                                <div class="bt-exercise">
+                                    <h6>Ex-1</h6>
+                                    <div class="checkbox-container">
+                                        <input type="checkbox" class="practice-bt-ex1">
+                                        <label>Completed</label>
+                                    </div>
+                                    <div class="remarks-container">
+                                        <label>Remarks:</label>
+                                        <textarea class="remarks-bt-ex1" placeholder="Add your remarks here..."></textarea>
+                                    </div>
+                                </div>
+                                
+                                <div class="bt-exercise">
+                                    <h6>Ex-2</h6>
+                                    <div class="checkbox-container">
+                                        <input type="checkbox" class="practice-bt-ex2">
+                                        <label>Completed</label>
+                                    </div>
+                                    <div class="remarks-container">
+                                        <label>Remarks:</label>
+                                        <textarea class="remarks-bt-ex2" placeholder="Add your remarks here..."></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </template>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
