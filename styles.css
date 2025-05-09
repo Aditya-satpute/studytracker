@@ -1,0 +1,238 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f5f7fa;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #2c3e50;
+}
+
+.tracker-section {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+h2, h3, h4, h5, h6 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.chapter-info {
+    display: flex;
+    gap: 15px;
+    align-items: flex-end;
+    margin-bottom: 10px;
+}
+
+.form-group {
+    flex: 1;
+    margin-bottom: 10px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+input[type="text"], textarea, select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+textarea.chapter-important-info {
+    height: 100px;
+    resize: vertical;
+}
+
+button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+.delete-btn {
+    background-color: #e74c3c;
+}
+
+.delete-btn:hover {
+    background-color: #c0392b;
+}
+
+.collapse-btn, .collapse-subject-btn {
+    background-color: #7f8c8d;
+    margin-right: 10px;
+}
+
+.collapse-btn:hover, .collapse-subject-btn:hover {
+    background-color: #636e72;
+}
+
+.subject-section {
+    margin-bottom: 40px;
+}
+
+.subject-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #34495e;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.subject-header h2 {
+    color: white;
+    margin: 0;
+}
+
+.chapters-list {
+    margin-left: 15px;
+}
+
+.chapter-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.chapter-header {
+    background-color: #f8f9fa;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+}
+
+.chapter-content {
+    padding: 20px;
+}
+
+.subsection {
+    background-color: #f8f9fa;
+    border-radius: 6px;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+input[type="checkbox"] {
+    margin-right: 10px;
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+
+.remarks-container {
+    margin-top: 10px;
+}
+
+.remarks-container textarea {
+    height: 80px;
+    resize: vertical;
+}
+
+.bt-exercises {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.bt-exercise {
+    flex: 1;
+    min-width: 250px;
+    background-color: white;
+    border-radius: 6px;
+    padding: 15px;
+    border: 1px solid #eee;
+}
+
+.collapsed .chapter-content {
+    display: none;
+}
+
+.collapsed-subject .chapters-list {
+    display: none;
+}
+
+.completed {
+    background-color: #e6f7e6;
+    border-left: 4px solid #2ecc71;
+}
+
+/* Subject-specific colors */
+#physics-container .chapter-header {
+    border-left: 4px solid #3498db;
+}
+
+#chemistry-container .chapter-header {
+    border-left: 4px solid #e74c3c;
+}
+
+@media (max-width: 768px) {
+    .chapter-info {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .bt-exercises {
+        flex-direction: column;
+    }
+    
+    .bt-exercise {
+        width: 100%;
+    }
+    
+    .chapter-actions {
+        display: flex;
+        margin-top: 10px;
+    }
+}
